@@ -6,7 +6,7 @@ module.exports = function(app){
         res.send('Hello, World!');
     });
     app.get('/test', (req, res) => {
-        res.send({message: 'testing'});
+        res.sendFile(path.join(__dirname , "../public/index.html"));
     });
     app.get('/image', (req, res) => {
         res.sendFile(path.join(__dirname , "../public/books.jpg"));
